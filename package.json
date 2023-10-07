@@ -1,7 +1,7 @@
 {
   "name": "glsl-analyzer",
   "displayName": "glsl_analyzer",
-  "description": "Language Server for GLSL (OpenGL Shading Language)",
+  "description": "Completion, goto-definition, inline documentation and formatter for GLSL (OpenGL Shading Language).",
   "repository": {
     "url": "https://github.com/nolanderc/glsl_analyzer-vscode"
   },
