@@ -1,6 +1,6 @@
-# glsl-analyzer
+# glsl_analyzer-vscode
 
-Language server support for GLSL (OpenGL Shading Language).
+Language server support for GLSL (OpenGL Shading Language) in Visual Studio Code.
 
 ## Features
 

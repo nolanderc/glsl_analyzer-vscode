@@ -2,6 +2,10 @@
   "name": "glsl-analyzer",
   "displayName": "glsl_analyzer",
   "description": "Language Server for GLSL (OpenGL Shading Language)",
+  "repository": {
+    "url": "https://github.com/nolanderc/glsl_analyzer-vscode"
+  },
+  "publisher": "nolanderc",
   "author": {
     "name": "Christofer Nolander",
     "email": "christofer@nolander.me",
