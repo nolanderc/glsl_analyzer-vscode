@@ -9,11 +9,12 @@ import {
 	Executable
 } from 'vscode-languageclient/node';
 import axios from 'axios';
-import * as AdmZip from 'adm-zip';
 import { mkdirp } from 'mkdirp';
 import * as fs from 'fs';
 import { spawnSync } from 'child_process';
 import { stdout } from 'process';
+
+const AdmZip = require('adm-zip');
 
 let client: LanguageClient | null = null;
 let config: vscode.WorkspaceConfiguration;
@@ -33,16 +34,13 @@ export async function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand('glsl-analyzer.download', async () => {
 			await stopClient();
 			await downloadLatestRelease(context);
+			vscode.window.showInformationMessage('updated to glsl_analyzer version: ' + getVersionString());
 			await startClient(context);
 		}),
 	);
 	context.subscriptions.push(
 		vscode.commands.registerCommand('glsl-analyzer.version', () => {
-			const exe_path: string | undefined = config.get('path');
-			if (exe_path) {
-				const result = spawnSync(exe_path, ['--version']);
-				vscode.window.showInformationMessage('glsl_analyzer version: ' + result.stdout.toString());
-			}
+			vscode.window.showInformationMessage('glsl_analyzer version: ' + getVersionString());
 		}),
 	);
 
@@ -175,5 +173,14 @@ function getDefaultTargetName(): string | null {
 		if (process.arch == 'arm64') return 'aarch64-macos';
 	}
 
+	return null;
+}
+
+function getVersionString(): string | null {
+	const exe_path: string | undefined = config.get('path');
+	if (exe_path) {
+		const result = spawnSync(exe_path, ['--version']);
+		return result.stdout.toString();
+	}
 	return null;
 }
