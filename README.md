@@ -16,7 +16,23 @@ Language server support for GLSL (OpenGL Shading Language) in Visual Studio Code
 - Formatter
 
 
+### Screenshots
+
+#### Autocompletion
+![completion](screenshots/completion.gif)
+
+#### Formatting
+![formatting](screenshots/formatting.gif)
+
+#### Goto-Definition
+![goto definition](screenshots/goto-definition.gif)
+
+
 ## Requirements
 
-Requires that you have the [`glsl_analyzer`](https://github.com/nolanderc/glsl_analyzer) binary installed.
-Precompiled binaries are supplied on the [Releases](https://github.com/nolanderc/glsl_analyzer/releases) page.
+Automatically downloads and installs the latest
+[`glsl_analyzer`](https://github.com/nolanderc/glsl_analyzer) (Linux, Windows and macOS).
+
+If your platform is not supported, or you want to build from source, follow the instructions
+[here](https://github.com/nolanderc/glsl_analyzer). Then, set the `glsl-analyzer.path` setting to
+the location of your executable.
