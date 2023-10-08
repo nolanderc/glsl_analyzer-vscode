@@ -72,7 +72,6 @@ async function startClient(context: vscode.ExtensionContext) {
 	};
 	let executable: Executable = {
 		command: executable_path,
-		args: ["--dev-mode=/home/christofer/dev/glsl_analyzer/stderr.log"],
 		transport: TransportKind.stdio,
 	};
 	let server_options: ServerOptions = executable;
