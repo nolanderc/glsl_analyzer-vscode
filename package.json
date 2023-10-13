@@ -23,7 +23,49 @@
     "onLanguage:glsl"
   ],
   "main": "./out/main.js",
+  "keywords": [
+    "language server",
+    "completion",
+    "documentation",
+    "glsl",
+    "shader"
+  ],
   "contributes": {
+    "languages": [
+      {
+        "id": "glsl",
+        "aliases": [
+          "OpenGL Shading Language",
+          "GLSL",
+          "glsl"
+        ],
+        "extensions": [
+          ".glsl",
+          ".vert",
+          ".frag",
+          ".geom",
+          ".tesc",
+          ".tese",
+          ".comp",
+          ".mesh",
+          ".task",
+          ".rgen",
+          ".rint",
+          ".rahit",
+          ".rchit",
+          ".rmiss",
+          ".rcall",
+          ".vs",
+          ".fs",
+          ".gs",
+          ".vsh",
+          ".fsh",
+          ".gsh",
+          ".csh"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
     "commands": [
       {
         "command": "glsl-analyzer.stopClient",

@@ -19,13 +19,13 @@ Language server support for GLSL (OpenGL Shading Language) in Visual Studio Code
 ### Screenshots
 
 #### Autocompletion
-![completion](screenshots/completion.gif)
+![completion](https://github.com/nolanderc/glsl_analyzer-vscode/blob/main/screenshots/completion.gif)
 
 #### Formatting
-![formatting](screenshots/formatting.gif)
+![formatting](https://github.com/nolanderc/glsl_analyzer-vscode/blob/main/screenshots/formatting.gif)
 
 #### Goto-Definition
-![goto definition](screenshots/goto-definition.gif)
+![goto definition](https://github.com/nolanderc/glsl_analyzer-vscode/blob/main/screenshots/goto-definition.gif)
 
 
 ## Requirements
